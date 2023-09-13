@@ -40,7 +40,7 @@ if __name__ == "__main__":
         # fingerprint_training = fingerprint_controller.predictFinger()
         face.Capture(args.sample)
         face.setMaxNumSamples(args.num)
-        cam = KADITACVVision(isUsingCam=False, addr="data/person/men.mp4")
+        cam = KADITACVVision(isUsingCam=True, addr="data/person/men.mp4")
         yolo = YoloV8()
         yolo.load("assets/models/yolov4-tiny-custom_final.weights", "assets/config/yolov4-tiny-custom.cfg",
                   "assets/class/person.names")
